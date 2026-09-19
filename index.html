@@ -289,8 +289,8 @@
      MANCHETE — título curto + parágrafo de abertura
      ═══════════════════════════════════════════ -->
 <div class="manchete">
-  <h2>CAUTELA GLOBAL E ELEIÇÕES PRESSIONAM MERCADOS</h2>
-  <p>O Ibovespa encerrou a sessão em queda de 0,41%, aos 185.229 pontos, acumulando perda semanal de 1,06%, pressionado pelo recuo do petróleo, que pesou sobre Petrobras e Vale, e pelo ambiente de cautela global. A perspectiva de novos aumentos de juros pelo Federal Reserve e pelo Banco do Japão elevou os rendimentos dos Treasuries, com a T-Note de 10 anos de volta aos 5%. No câmbio, o dólar fechou em leve alta de 0,10%, a R$ 5,1442, após dissipar parte do desconforto eleitoral gerado pela pesquisa Datafolha. Os juros futuros domésticos se descolaram da tendência global e recuaram levemente, sustentados pelo cenário eleitoral competitivo.</p>
+  <h2>CAUTELA GLOBAL E ELEIÇÕES PRESSIONAM MERCADOS BRASILEIROS</h2>
+  <p>O Ibovespa encerrou a sessão em queda de 0,41%, aos 185.229 pontos, acumulando perda semanal de 1,06%, pressionado pela queda do petróleo, que pesou sobre Petrobras e Vale, e pela postura mais defensiva dos investidores. O dólar à vista terminou com leve alta de 0,10%, a R$ 5,1442, após recuar da máxima de R$ 5,1662 atingida pela manhã. No cenário externo, a perspectiva de novos aumentos de juros pelo Federal Reserve e pelo Banco do Japão elevou os rendimentos dos Treasuries, com a T-Note de 10 anos de volta aos 5%. Internamente, o quadro eleitoral de empate técnico entre os candidatos à presidência amorteceu parte da pressão sobre os juros futuros, que se descolaram da tendência global e recuaram levemente.</p>
 </div>
 
 <!-- ═══════════════════════════════════════════
@@ -320,59 +320,30 @@
   </div>
 </div>
 
-<div class="corpo">
-
-  <!-- ═══════════════════════════════════════════
-       AGENDA — um <li> por evento
-       Colunas: bandeira SVG | hora (ex: "8h00") | descrição
-       O gerar.py preenche a bandeira pelo código do país (BR, US, EU...)
-       Se sem hora, usar "no dia" na coluna de hora
-       ═══════════════════════════════════════════ -->
-  <div class="agenda">
-    <div class="agenda-titulo">Agenda de hoje</div>
-    <ul class="agenda-lista">
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>Encontro Xi Jinping e Donald Trump</strong>
-          <span>Líderes discutirão tarifas, terras raras, trégua comercial, sanções ao Irã, IA e Taiwan.</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>Reunião Bessent e He Lifeng em Nova York</strong>
-          <span>Secretário do Tesouro americano se reúne com vice-primeiro-ministro chinês no fim de semana.</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>MPTCU pede suspensão do reajuste do Bolsa Família</strong>
-          <span>Órgão aponta possível desrespeito à Lei de Responsabilidade Fiscal no reajuste de 15% anunciado pelo governo.</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>Ata do Copom</strong>
-          <span>Mercado aguarda publicação da ata do Comitê de Política Monetária na próxima semana.</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>Decisões do STF</strong>
-          <span>Mercado monitora desdobramentos envolvendo ministros do STF e relação com Daniel Vorcaro.</span>
-        </span>
-      </li>
-    </ul>
+<div class="painel">
+  <div class="cotacao">
+    <div class="label">Treasury 2Y</div>
+    <div class="valor"><span class="num">{{TREASURY_2Y}}</span></div>
+    <div class="var {{TREASURY_2Y_COR}}">{{TREASURY_2Y_VAR}}</div>
   </div>
+  <div class="cotacao">
+    <div class="label">CDS Brasil</div>
+    <div class="valor"><span class="num"></span></div>
+    <div class="var "></div>
+  </div>
+  <div class="cotacao">
+    <div class="label">DXY Index</div>
+    <div class="valor"><span class="num"></span></div>
+    <div class="var "></div>
+  </div>
+  <div class="cotacao">
+    <div class="label">CDI</div>
+    <div class="valor"><span class="num"></span></div>
+    <div class="var "></div>
+  </div>
+</div>
+
+<div class="corpo">
 
   <!-- ═══════════════════════════════════════════
        SEÇÕES — ordem fixa:
@@ -383,32 +354,27 @@
 
   <div class="secao">
     <h3>Juros</h3>
-    <p>Na contramão da pressão nos mercados de renda fixa globais, os juros futuros brasileiros inverteram a alta da primeira parte da sessão e passaram a recuar levemente a partir das 13h30, sem um gatilho claro, mas associado ao cenário eleitoral, com a percepção crescente de que a oposição pode vencer a disputa presidencial. Houve ingresso de fluxo aplicado em todos os vencimentos na segunda etapa do pregão, com mais força no contrato de janeiro de 2031. Às 17h15, a taxa do DI para janeiro de 2027 marcava estabilidade em 13,555%, o DI para janeiro de 2029 cedia a 13,830% e o DI para janeiro de 2031 anotava baixa a 14,025%. Na semana, a curva a termo perdeu de 1 a 3 pontos-base nos principais vértices. O pedido do MPTCU para suspender o reajuste de 15% do Bolsa Família também pode ter contribuído para o alívio, ao sinalizar resistência ao aumento do gasto público. Nos EUA, os Treasuries continuaram se ajustando após a alta de 0,25 ponto percentual promovida pelo Fed na quarta-feira e o aperto do Banco do Japão, com a T-note de dois anos subindo a 4,754% e a de dez anos chegando a 5,004%.</p>
+    <p>Na contramão da pressão nos mercados de renda fixa globais, os juros futuros brasileiros inverteram a alta observada pela manhã e passaram a recuar levemente a partir das 13h30, sem um gatilho claro identificado pelos profissionais de mercado. O movimento foi associado ao pano de fundo eleitoral, com a percepção crescente de que a oposição pode vencer a disputa presidencial, além de fluxo aplicado distribuído ao longo de todos os vencimentos da curva, com maior intensidade no contrato de janeiro de 2031. A taxa do DI para janeiro de 2027 marcava estabilidade em 13,555%, enquanto o DI para janeiro de 2029 cedia a 13,830% e o DI para janeiro de 2031 anotava baixa a 14,025%. Na semana, a curva a termo perdeu de 1 a 3 pontos-base nos principais vértices. O pedido do MPTCU para suspender o reajuste de 15% do Bolsa Família também pode ter contribuído para o alívio. Nos EUA, a T-Note de dois anos avançou de 4,683% para 4,754%, e a de dez anos subiu de 4,937% para 5,004%, refletindo a alta de juros do Fed e o aperto promovido pelo Banco do Japão, que elevou sua taxa básica para 1,25%, maior nível em três décadas.</p>
   </div>
 
   <div class="secao">
     <h3>Dólar</h3>
-    <p>O dólar reduziu bastante o ritmo de alta frente ao real na segunda etapa de negócios, acompanhando a desaceleração da moeda americana no exterior em meio à diminuição das perdas do iene. Depois de atingir R$ 5,1662 pela manhã, o dólar à vista terminou o dia a R$ 5,1442, alta de 0,10%, acumulando ganho de 0,37% na semana. Em setembro, a divisa ainda recua 0,69% ante o real, após alta de 2,16% em agosto. Parte do desconforto eleitoral provocado pela pesquisa Datafolha, que não mostrou a esperada melhora de Flávio Bolsonaro, também se dissipou à tarde. O índice DXY operava aos 100,196 pontos por volta das 17h00, em queda de 0,05%, após atingir 100,564 pela manhã, maior nível em sete semanas. O Banco Central vendeu US$ 1 bilhão no mercado à vista em leilão de linha pela manhã para melhorar a liquidez, acumulando US$ 2 bilhões em operações no mês para conter distorções de fim de trimestre.</p>
+    <p>O dólar reduziu bastante o ritmo de alta frente ao real na segunda etapa de negócios, acompanhando a desaceleração da moeda americana no exterior em meio à diminuição das perdas do iene. Depois de atingir R$ 5,1662 pela manhã, o dólar à vista terminou o dia a R$ 5,1442, alta de 0,10%, acumulando ganho semanal de 0,37%. Em setembro, a divisa ainda recua 0,69% ante o real, após alta de 2,16% em agosto. O índice DXY operava aos 100,196 pontos por volta das 17h00, em queda de 0,05%, após atingir 100,564 pela manhã, maior nível em sete semanas. O Banco Central vendeu US$ 1 bilhão no mercado à vista em leilão de linha pela manhã para melhorar a liquidez, em meio à forte pressão por remessas de divisas ao exterior, incluindo movimentos atribuídos à corrida presidencial. No mês, o BC já realizou dois casadões totalizando US$ 2 bilhões em intervenções.</p>
   </div>
 
   <div class="secao">
     <h3>Bolsa</h3>
-    <p>O Ibovespa encerrou o pregão desta sexta-feira em queda de 0,41%, aos 185.229,17 pontos, acumulando perda semanal de 1,06%, num ajuste de posição dos investidores que optaram por posições mais defensivas antes do fim de semana. No mês, o índice ainda acumula ganho de 4,4%, e no ano, de 15%. Parte da pressão veio do petróleo, cujo recuo pesou sobre as ações da Petrobras, com as preferenciais cedendo 0,23% e as ordinárias, 1,09%. As quedas de Vale ON e dos bancos também contribuíram para o desempenho negativo. O dia ainda foi marcado pelo triple witching, com vencimentos simultâneos de derivativos sobre ações e índices. O reajuste de 15% no Bolsa Família anunciado pelo governo e o imbróglio envolvendo ministros do STF e Daniel Vorcaro, ex-dono do Banco Master, adicionaram incerteza ao ambiente, levando o investidor a recalibrar preços diante de maior risco eleitoral, fiscal e de juros globais menos favoráveis.</p>
+    <p>O Ibovespa encerrou o pregão desta sexta-feira em queda de 0,41%, aos 185.229,17 pontos, acumulando perda de 1,06% na semana, pautado por ajuste de posição dos investidores, que optaram por posições mais defensivas antes do fim de semana. No mês, o índice ainda acumula ganho de 4,4%, e no ano sobe 15%. A pressão veio principalmente do recuo do petróleo, que pesou sobre as ações da Petrobras, com as preferenciais cedendo 0,23% e as ordinárias recuando 1,09%. As perdas de Vale ON também contribuíram para o desempenho negativo do índice. O mercado ainda digeria o reajuste de 15% no Bolsa Família anunciado pelo governo, o imbróglio envolvendo ministros do STF e o quadro externo desfavorável, com bolsas americanas sem direção definida após a alta de juros do Fed. O dia também foi marcado pelo triple witching, com vencimentos simultâneos de derivativos sobre ações e índices.</p>
   </div>
 
   <div class="secao">
     <h3>Eleições</h3>
-    <p>A pesquisa Datafolha divulgada na véspera, que mostrou empate técnico entre o presidente Lula e o senador Flávio Bolsonaro, com o petista numericamente à frente, não gerou grande impacto pela manhã, sendo lida pelo mercado como mais do mesmo. No entanto, ao longo da tarde, a percepção de que a oposição segue competitiva na corrida presidencial contribuiu para o alívio nos juros futuros e a recuperação parcial do real, em um mercado que tem precificado que uma eventual vitória de Flávio Bolsonaro poderia trazer maior austeridade fiscal. O cenário eleitoral apertado, combinado ao anúncio do reajuste do Bolsa Família, mantém os investidores cautelosos quanto aos rumos da política fiscal a partir de 2027.</p>
+    <p>O cenário eleitoral brasileiro seguiu como principal fator de influência nos ativos domésticos ao longo desta sexta-feira. A pesquisa Datafolha divulgada na véspera, que mostrou empate técnico entre o presidente Lula e o senador Flávio Bolsonaro, com o petista numericamente à frente, foi lida pelo mercado como neutra pela manhã, sem grande impulso da oposição. À tarde, porém, a percepção de que a oposição permanece competitiva na corrida presidencial contribuiu para aliviar a pressão sobre os juros futuros, que se descolaram da tendência global de alta. Para parte do mercado, um eventual governo de direita estaria mais inclinado a entregar um ajuste fiscal. O estrategista do Citi, Iván Riveros, avaliou que nas próximas semanas os ativos locais devem continuar sendo guiados principalmente por desdobramentos políticos, dado que a divergência nos arcabouços fiscal e econômico dos candidatos moldará as expectativas do mercado para 2027.</p>
   </div>
 
   <div class="secao">
     <h3>Petróleo</h3>
-    <p>O petróleo encerrou a sessão e a semana em queda, ainda que os preços rondassem a casa dos três dígitos por barril. O barril do Brent fechou cotado a US$ 103,87, queda de 0,91% no dia. Investidores ponderaram a possível retomada do fluxo por um importante oleoduto da Arábia Saudita, com expectativas de que o país consiga restabelecer em poucos dias cerca de metade da capacidade do oleoduto Leste-Oeste, danificado por um ataque. Paralelamente, o regime iraniano continuou a atacar embarcações no Estreito de Ormuz, mantendo o risco geopolítico elevado. Os preços do diesel atingiram um recorde de US$ 6,45 por galão nos EUA, e a gasolina está em US$ 4,47 o galão, ante US$ 3,20 registrados há um ano, segundo a Associação Americana de Automóveis.</p>
-  </div>
-
-  <div class="secao">
-    <h3>Petrobras</h3>
-    <p>O desempenho negativo do petróleo no dia pesou diretamente sobre os papéis da Petrobras na bolsa. As ações preferenciais da companhia recuaram 0,23%, enquanto as ordinárias cederam 1,09%, contribuindo de forma relevante para a queda do Ibovespa na sessão. O movimento refletiu o recuo do Brent, referência para a estatal, que fechou a US$ 103,87 por barril, com baixa de 0,91%, em meio às expectativas de retomada parcial do oleoduto saudita Leste-Oeste. O cenário de cautela eleitoral e fiscal no Brasil também pesou sobre o humor dos investidores em relação aos papéis da empresa.</p>
+    <p>O petróleo encerrou a sessão e a semana em queda pela terceira sessão consecutiva, ainda que os preços rondem a casa dos três dígitos por barril. O Brent, referência para a Petrobras, fechou cotado a US$ 103,87, queda de 0,91%. Investidores ponderaram a possível retomada do fluxo por um importante oleoduto da Arábia Saudita, com expectativas de que o país consiga restabelecer em poucos dias cerca de metade da capacidade do oleoduto Leste-Oeste, danificado por um ataque. Ao mesmo tempo, o regime iraniano continuou a atacar embarcações no Estreito de Ormuz, mantendo o ambiente geopolítico tenso. Os preços do diesel atingiram um recorde de US$ 6,45 por galão nos EUA, e a gasolina está em US$ 4,47 o galão, aumento expressivo em relação aos US$ 3,20 registrados há um ano. O ING avalia que o petróleo deve se tornar o principal fator impulsionador do dólar no curto prazo.</p>
   </div>
 
 </div>
