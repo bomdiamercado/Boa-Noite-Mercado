@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa Noite Mercado - Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 450px;
+            background: linear-gradient(135deg, #0A1F2E 0%, #0F2A3A 100%);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-content {
+            padding: 60px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 600px;
+            position: relative;
+        }
+
+        /* Lua crescente SVG */
+        .moon-icon {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .moon-icon svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 12px rgba(212, 165, 116, 0.3));
+        }
+
+        /* Textos principais */
+        .text-container {
+            margin-bottom: 30px;
+        }
+
+        .text-boa {
+            font-size: 48px;
+            font-weight: 600;
+            color: #E9E6DE;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .text-noite {
+            font-size: 48px;
+            font-weight: 600;
+            color: #E9E6DE;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .text-mercado {
+            font-size: 56px;
+            font-weight: 700;
+            color: #D4A574;
+            letter-spacing: 1.5px;
+            margin-bottom: 30px;
+        }
+
+        /* Data */
+        .date-text {
+            font-size: 16px;
+            color: #9BA5AD;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+        }
+
+        /* Estrelas decorativas de fundo */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(233, 230, 222, 0.4);
+            border-radius: 50%;
+        }
+
+        .star-1 { top: 20%; left: 10%; width: 3px; height: 3px; }
+        .star-2 { top: 15%; right: 15%; width: 2px; height: 2px; }
+        .star-3 { top: 40%; right: 8%; width: 2px; height: 2px; }
+        .star-4 { bottom: 25%; left: 12%; width: 2px; height: 2px; }
+        .star-5 { bottom: 20%; right: 10%; width: 3px; height: 3px; }
+
+        /* Responsivo */
+        @media (max-width: 480px) {
+            .card-content {
+                padding: 50px 20px;
+                min-height: 500px;
+            }
+
+            .moon-icon {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 30px;
+            }
+
+            .text-boa,
+            .text-noite {
+                font-size: 40px;
+            }
+
+            .text-mercado {
+                font-size: 48px;
+            }
+
+            .date-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-content">
+            <!-- Estrelas decorativas -->
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+            <div class="star star-4"></div>
+            <div class="star star-5"></div>
+
+            <!-- Lua -->
+            <div class="moon-icon">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#E9E6DE;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#D4A574;stop-opacity:0.8" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Lua cheia -->
+                    <circle cx="128" cy="128" r="70" fill="url(#moonGrad)"/>
+                    <!-- Sombra para criar crescente -->
+                    <circle cx="155" cy="128" r="70" fill="#0A1F2E"/>
+                    <!-- Halo -->
+                    <circle cx="128" cy="128" r="70" fill="none" stroke="#D4A574" stroke-width="2" opacity="0.6"/>
+                </svg>
+            </div>
+
+            <!-- Textos -->
+            <div class="text-container">
+                <div class="text-boa">BOA</div>
+                <div class="text-noite">NOITE</div>
+                <div class="text-mercado">MERCADO</div>
+            </div>
+
+            <!-- Data -->
+            <div class="date-text">Sexta-feira, 19 de setembro de 2026</div>
+        </div>
+    </div>
+</body>
+</html>
