@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TÍTULO: "Boa Noite Mercado — DD/MM/AAAA" -->
+  <title>Boa Noite Mercado — 19/09/2025</title>
+  <!-- DESCRIPTION: manchete resumida em uma linha -->
+  <meta name="description" content="Ibovespa cai 0,41% e dólar sobe levemente com cautela eleitoral, juros globais em alta e petróleo em queda.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Boa Noite Mercado — 19/09/2025">
+  <meta property="og:description" content="Ibovespa cai 0,41% e dólar sobe levemente com cautela eleitoral, juros globais em alta e petróleo em queda.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Boa Noite Mercado">
+  <meta property="og:image" content="https://bomdiamercado.github.io/Boa-Noite-Mercado/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --night-bg:    #0F1419;
+      --night-card:  #1A2332;
+      --night-header:#0D0E13;
+      --blue:        #4A7BA7;
+      --blue-light:  #5A8BB8;
+      --paper:       #E9E6DE;
+      --amber:       #D4A574;
+      --text:        #E9E6DE;
+      --muted:       #9BA5AD;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Carlito', Calibri, sans-serif;
+      background: var(--night-bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--night-header);
+      color: #fff;
+      padding: 18px 24px 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid rgba(74,123,167,0.2);
+    }
+    .logo-lua { flex-shrink: 0; }
+    .logo-texto h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .logo-texto .data {
+      font-size: 0.82rem;
+      opacity: 0.7;
+      margin-top: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── MANCHETE ── */
+    .manchete {
+      background: var(--night-card);
+      color: #fff;
+      padding: 20px 24px 18px;
+      border-bottom: 1px solid rgba(74,123,167,0.15);
+    }
+    .manchete h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .manchete p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      opacity: 0.85;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* ── PAINEL COTAÇÕES ── */
+    .painel {
+      background: var(--night-card);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid rgba(74,123,167,0.15);
+    }
+    .cotacao {
+      padding: 12px 14px;
+      border-right: 1px solid rgba(74,123,167,0.1);
+      color: #fff;
+    }
+    .cotacao:last-child { border-right: none; }
+    .cotacao .label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.55;
+      margin-bottom: 3px;
+      color: var(--muted);
+    }
+    .cotacao .valor {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .cotacao .var {
+      font-size: 0.72rem;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+    .var.pos { color: #6fcf97; }
+    .var.neg { color: #ff6b6b; }
+    .var.neu { color: rgba(255,255,255,0.4); }
+
+    /* ── CORPO ── */
+    .corpo {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    /* ── AGENDA ── */
+    .agenda {
+      margin: 24px 0 8px;
+      border: 1px solid rgba(74,123,167,0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--night-card);
+    }
+    .agenda-titulo {
+      background: var(--night-header);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-bottom: 1px solid rgba(74,123,167,0.1);
+    }
+    .agenda-lista { list-style: none; }
+    .agenda-lista li {
+      display: grid;
+      grid-template-columns: 28px 52px 1fr;
+      gap: 8px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(74,123,167,0.1);
+      align-items: start;
+      line-height: 1.4;
+    }
+    .agenda-lista li:last-child { border-bottom: none; }
+    .agenda-lista li:nth-child(even) { background: rgba(74,123,167,0.05); }
+    .agenda-lista .bandeira {
+      width: 22px;
+      height: 15px;
+      display: block;
+      margin-top: 3px;
+      border: 1px solid rgba(74,123,167,0.3);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .agenda-lista .bandeira svg { display: block; width: 100%; height: 100%; }
+    .agenda-lista .hora {
+      color: var(--muted);
+      font-size: 0.78rem;
+      padding-top: 1px;
+    }
+    .agenda-lista .desc strong {
+      display: block;
+      font-weight: 700;
+      color: var(--blue-light);
+    }
+    .agenda-lista .desc span {
+      color: var(--muted);
+      font-size: 0.80rem;
+    }
+
+    /* ── SEÇÕES ── */
+    .secao { margin-top: 24px; }
+    .secao h3 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      border-bottom: 2px solid var(--amber);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+    .secao p {
+      font-size: 0.915rem;
+      line-height: 1.65;
+      text-align: justify;
+      hyphens: auto;
+      color: var(--text);
+    }
+
+    /* ── NÚMEROS ── */
+    .num { font-weight: 700; color: var(--blue-light); }
+
+    /* ── TABELA (opcional) ── */
+    .tabela {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 12px;
+    }
+    .tabela th {
+      background: var(--night-header);
+      color: #fff;
+      text-align: left;
+      padding: 7px 10px;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid rgba(74,123,167,0.2);
+    }
+    .tabela td {
+      padding: 6px 10px;
+      border: 1px solid rgba(74,123,167,0.1);
+    }
+    .tabela tr:nth-child(even) td { background: rgba(74,123,167,0.05); }
+
+    /* ── GRÁFICO SVG (opcional) ── */
+    .grafico-wrap {
+      margin-top: 16px;
+      background: var(--night-card);
+      border: 1px solid rgba(74,123,167,0.2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .grafico-wrap svg { display: block; width: 100%; height: auto; }
+
+    /* ── RODAPÉ ── */
+    footer {
+      background: var(--night-header);
+      color: rgba(255,255,255,0.35);
+      font-size: 0.72rem;
+      text-align: center;
+      padding: 14px 20px;
+      margin-top: 32px;
+      letter-spacing: 0.03em;
+      border-top: 1px solid rgba(74,123,167,0.2);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER — substituir DATA_LONGA pela data por extenso
+     Exemplo: "Quinta-feira, 17 de setembro de 2026"
+     ═══════════════════════════════════════════ -->
+<header>
+  <!-- Lua SVG — ícone noturno do Boa Noite Mercado -->
+  <svg class="logo-lua" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="24" cy="24" r="14" fill="none" stroke="#4A7BA7" stroke-width="1.5" opacity="0.4"/>
+    <path d="M20 18 Q16 22 18 28 Q24 30 28 26 Q28 20 24 16 Q22 16 20 18Z" fill="#D4A574" opacity="0.9"/>
+    <g stroke="#4A7BA7" stroke-width="1" opacity="0.3">
+      <circle cx="10" cy="8" r="1"/>
+      <circle cx="38" cy="12" r="1.5"/>
+      <circle cx="42" cy="34" r="1"/>
+      <circle cx="8" cy="42" r="1.2"/>
+    </g>
+  </svg>
+  <div class="logo-texto">
+    <h1>Boa Noite Mercado</h1>
+    <div class="data">Sexta-feira, 19 de setembro de 2025</div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     MANCHETE — título curto + parágrafo de abertura
+     ═══════════════════════════════════════════ -->
+<div class="manchete">
+  <h2>CAUTELA ELEITORAL E JUROS GLOBAIS PESAM SOBRE ATIVOS BRASILEIROS</h2>
+  <p>O Ibovespa encerrou a sessão desta sexta-feira em queda de 0,41%, aos 185.229 pontos, acumulando perda semanal de 1,06%, pressionado pela queda do petróleo, pelo desempenho negativo de Petrobras e Vale e pelo clima de cautela antes do fim de semana. O dólar à vista terminou em leve alta de 0,10%, a R$ 5,1442, com ganho semanal de 0,37%, refletindo o fortalecimento global da moeda americana após o Federal Reserve elevar os juros e sinalizar postura mais dura. No mercado de juros, os DIs se descolaram da pressão global e recuaram levemente à tarde, apoiados pelo cenário eleitoral doméstico, com a percepção crescente de que a oposição segue competitiva na corrida presidencial.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAINEL DE COTAÇÕES — 4 blocos
+     var: usar classe "pos" (verde), "neg" (vermelho) ou "neu" (neutro)
+     ═══════════════════════════════════════════ -->
+<div class="painel">
+  <div class="cotacao">
+    <div class="label">Dólar</div>
+    <div class="valor"><span class="num">5,1442</span></div>
+    <div class="var neg">+0,10%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">Ibovespa</div>
+    <div class="valor"><span class="num">185.229</span></div>
+    <div class="var neg">-0,41%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">Brent</div>
+    <div class="valor"><span class="num">103,87</span></div>
+    <div class="var neg">-0,91%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">T-Note 10a</div>
+    <div class="valor"><span class="num">5,004</span></div>
+    <div class="var neg">+0,067%</div>
+  </div>
+</div>
+
+<div class="corpo">
+
+  <!-- ═══════════════════════════════════════════
+       AGENDA — um <li> por evento
+       Colunas: bandeira SVG | hora (ex: "8h00") | descrição
+       O gerar.py preenche a bandeira pelo código do país (BR, US, EU...)
+       Se sem hora, usar "no dia" na coluna de hora
+       ═══════════════════════════════════════════ -->
+  <div class="agenda">
+    <div class="agenda-titulo">Agenda de hoje</div>
+    <ul class="agenda-lista">
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Triple witching em Wall Street</strong>
+          <span>Vencimento simultâneo de derivativos sobre ações e índices nas bolsas americanas.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><circle cx="14" cy="10" r="5.5" fill="#BC002D"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Banco do Japão eleva juros para 1,25%</strong>
+          <span>BoJ elevou a taxa básica em 25 pontos-base, maior nível desde 1995, pressionando curvas globais.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Declarações do presidente do Fed de Kansas City, Jeff Schmid</strong>
+          <span>Schmid afirmou apoiar a decisão do Fomc de subir juros para reduzir a inflação, considerada muito alta por muito tempo.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#003399"/><g fill="#FFCC00"><circle cx="14" cy="5" r="1"/><circle cx="17.5" cy="6" r="1"/><circle cx="19.5" cy="9" r="1"/><circle cx="18.5" cy="12.5" r="1"/><circle cx="14" cy="14" r="1"/><circle cx="9.5" cy="12.5" r="1"/><circle cx="8.5" cy="9" r="1"/><circle cx="10.5" cy="6" r="1"/></g></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Dirigente do BCE, Martins Kazaks, sinaliza mais aperto monetário</strong>
+          <span>Kazaks indicou que o BCE provavelmente precisará continuar movendo a taxa para território contracionista.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#DE2910"/><g fill="#FFDE00"><circle cx="6" cy="5.5" r="2.6"/><circle cx="11.5" cy="2.6" r="0.9"/><circle cx="13.6" cy="5" r="0.9"/><circle cx="13.2" cy="8.2" r="0.9"/><circle cx="10.8" cy="10" r="0.9"/></g></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Encontro entre Xi Jinping e Donald Trump previsto para a próxima quinta-feira</strong>
+          <span>Líderes discutirão tarifas, terras raras, trégua comercial, sanções ao Irã, IA e Taiwan.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Scott Bessent deve se reunir no fim de semana com He Lifeng</strong>
+          <span>Secretário do Tesouro americano encontra vice-primeiro-ministro chinês em Nova York nas preparações para cúpula.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="9.4" height="20" fill="#006847"/><rect width="9.2" height="20" x="9.4" fill="#fff"/><rect width="9.4" height="20" x="18.6" fill="#CE1126"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Sheinbaum confirma conversa com Trump sobre tarifas</strong>
+          <span>Presidenta mexicana disse que Trump busca reduzir déficit comercial de US$ 197 bilhões, sem revelar detalhes.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>MPTCU pede suspensão do reajuste de 15% do Bolsa Família</strong>
+          <span>Órgão aponta possível violação da Lei de Responsabilidade Fiscal por falta de indicação de fonte de custeio.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Pesquisa Datafolha mostra empate técnico entre Lula e Flávio Bolsonaro</strong>
+          <span>Resultado foi lido pelo mercado como neutro, sem grande impulso para a oposição.</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Banco Central vende US$ 1 bilhão em leilão de linha no mercado à vista</strong>
+          <span>Operação visou melhorar liquidez em meio à forte pressão por remessas de divisas ao exterior no fim do trimestre.</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SEÇÕES — ordem fixa:
+       JUROS | DÓLAR | BOLSA | ELEIÇÕES | PETRÓLEO | PETROBRAS
+       Petrobras: "Nenhuma notícia relevante." se não houver
+       Números sempre dentro de <span class="num">
+       ═══════════════════════════════════════════ -->
+
+  <div class="secao">
+    <h3>Juros</h3>
+    <p>Na contramão da pressão nos mercados de renda fixa globais, que reagiram à perspectiva de mais aperto monetário à frente, os juros futuros brasileiros inverteram a alta da primeira etapa do pregão e passaram a recuar levemente a partir das 13h30. Profissionais do mercado não identificaram um gatilho preciso para o movimento, mas o relacionaram ao cenário eleitoral, diante da percepção crescente de que a oposição pode sair vencedora da disputa presidencial. Houve ingresso de fluxo aplicado em todas as taxas na segunda etapa do pregão, principalmente na ponta longa, o que contribuiu para a redução dos prêmios. O pedido do MPTCU para suspender o reajuste de 15% do Bolsa Família também pode ter ajudado. Às 17h15, a taxa do DI para janeiro de 2027 marcava estabilidade frente ao ajuste da véspera, em 13,555%; o DI para janeiro de 2029 cedia a 13,830%, vindo de 13,845%; e o DI para janeiro de 2031 anotava baixa de 14,061% para 14,025%. Na semana, a curva a termo perdeu de 1 a 3 pontos-base nos principais vértices. Nos EUA, a T-note de dois anos avançou de 4,683% para 4,754%, e a de dez anos subiu de 4,937% para 5,004%, refletindo a alta de 0,25 ponto percentual promovida pelo Fed na quarta-feira e a elevação dos juros pelo Banco do Japão para 1,25%, maior nível em três décadas.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Dólar</h3>
+    <p>O dólar reduziu bastante o ritmo de alta frente ao real na segunda etapa de negócios, acompanhando a desaceleração da moeda americana no exterior em meio à diminuição das perdas do iene. O desconforto eleitoral provocado pela pesquisa Datafolha, divulgada na véspera, também se dissipou à tarde, contribuindo para a recuperação do real. Depois de atingir R$ 5,1662 pela manhã, o dólar à vista terminou o dia a R$ 5,1442, alta de 0,10%, acumulando ganho semanal de 0,37%. Em setembro, o dólar ainda recua 0,69% ante o real, após alta de 2,16% em agosto. O índice DXY operava aos 100,196 pontos por volta das 17h00, em queda de 0,05%, após atingir 100,564 pela manhã, maior nível em sete semanas; na semana, o Dollar Index acumula ganho de pouco mais de 1%. Pela manhã, o Banco Central vendeu US$ 1 bilhão no mercado à vista em leilão de linha, ajudando a melhorar a liquidez em meio à forte pressão por remessas de divisas ao exterior no fim do trimestre. O BC já realizou dois casadões neste mês, no total de US$ 2 bilhões, e pode realizar novas operações caso a liquidez não melhore.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Bolsa</h3>
+    <p>O Ibovespa encerrou o pregão desta sexta-feira em queda de 0,41%, aos 185.229,17 pontos, acumulando perda de 1,06% na semana, pautado pelo ajuste de posições dos investidores, que optaram por postura mais defensiva antes do fim de semana. Parte da pressão veio do recuo do petróleo, que pesou sobre as ações da Petrobras: as preferenciais cederam 0,23% e as ordinárias, 1,09%. As perdas de Vale ON também contribuíram para a queda do índice, ao lado do desempenho negativo dos bancos. O mercado também digeriu o reajuste de 15% no Bolsa Família anunciado pelo governo e seu potencial custo fiscal a partir do ano seguinte. O quadro externo menos propenso ao risco, com bolsas americanas sem direção única e juros globais em alta após as decisões do Fed e do Banco do Japão, reforçou a cautela local. A sessão também foi marcada por exercício de opções sobre ações. No mês, o Ibovespa acumula ganho de 4,4%, ainda na esteira da confiança dos investidores em uma possível alternância de poder e maior austeridade fiscal; no ano, o índice sobe 15%.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Eleições</h3>
+    <p>O cenário eleitoral doméstico seguiu como pano de fundo relevante para os ativos brasileiros ao longo da sessão. A pesquisa Datafolha divulgada na noite anterior mostrou empate técnico entre o presidente Lula e o senador Flávio Bolsonaro, com o petista numericamente à frente, mas o resultado foi lido pelo mercado como neutro, sem grande impulso da oposição pela manhã. À tarde, porém, a percepção de que a oposição segue competitiva na corrida presidencial foi apontada por operadores como o principal fator que permitiu o alívio nos juros futuros, descolando-os da pressão global. Para o estrategista do Citi, Iván Riveros, os DIs devem continuar sendo guiados nas próximas semanas principalmente por desdobramentos políticos, já que a divergência nos arcabouços fiscal e econômico dos candidatos moldará as expectativas do mercado para 2027. O pedido do MPTCU para suspender o reajuste de 15% do Bolsa Família, que pode ter desrespeitado a Lei de Responsabilidade Fiscal, também foi monitorado pelos agentes como fator de alívio sobre a curva de juros.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Petróleo</h3>
+    <p>O petróleo encerrou a sessão e a semana em queda, pela terceira sessão consecutiva, ainda que os preços se mantivessem próximos à casa dos três dígitos por barril. O Brent fechou cotado a US$ 103,87, recuo de 0,91%. Investidores ponderaram a possível retomada do fluxo por um importante oleoduto Leste-Oeste da Arábia Saudita, danificado por um ataque durante a semana, com expectativas de que os sauditas consigam restabelecer cerca de metade da capacidade em poucos dias. Ao mesmo tempo, o Irã continuou a atacar embarcações que não seguem a rota delimitada pelo regime no Estreito de Ormuz, mantendo as tensões geopolíticas no radar. Nos EUA, os preços do diesel atingiram um recorde de US$ 6,45 por galão, enquanto a gasolina estava em US$ 4,47 o galão, aumento expressivo em relação aos US$ 3,20 registrados há um ano, segundo a Associação Americana de Automóveis.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Petrobras</h3>
+    <p>As ações da Petrobras encerraram o pregão em queda, pressionadas pelo recuo do petróleo no mercado internacional. As preferenciais da companhia cederam 0,23%, enquanto as ordinárias registraram queda de 1,09%. O desempenho negativo dos papéis da estatal foi um dos fatores que pesou sobre o Ibovespa ao longo da sessão, junto às perdas de Vale ON e dos bancos. O recuo do Brent, referência para a Petrobras, para US$ 103,87 por barril, com queda de 0,91%, refletiu a perspectiva de retomada parcial do oleoduto saudita Leste-Oeste e contribuiu para o movimento vendedor sobre as ações da companhia.</p>
+  </div>
+
+</div>
+
+<footer>
+  Boa Noite Mercado · 19/09/2025
+</footer>
+
+</body>
+</html>
